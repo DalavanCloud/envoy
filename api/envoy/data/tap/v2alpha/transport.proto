@@ -67,4 +67,10 @@ message SocketTrace {
 
   // Sequence of observed events.
   repeated SocketEvent events = 2;
+
+  // fixfix
+  bool read_truncated = 3;
+
+  // fixfix
+  bool write_truncated = 4;
 }

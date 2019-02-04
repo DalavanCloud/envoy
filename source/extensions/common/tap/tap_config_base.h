@@ -18,9 +18,11 @@ class Utility {
 public:
   /**
    * Add body data to a tapped body message, taking into account the maximum bytes to buffer.
+   * fixfix
    */
-  static void addBufferToProtoBytes(envoy::data::tap::v2alpha::Body& output_body,
-                                    uint32_t max_buffered_bytes, const Buffer::Instance& data);
+  static bool addBufferToProtoBytes(envoy::data::tap::v2alpha::Body& output_body,
+                                    uint32_t max_buffered_bytes, const Buffer::Instance& data,
+                                    uint32_t buffer_start_offset, uint32_t buffer_length_to_copy);
 };
 
 /**
